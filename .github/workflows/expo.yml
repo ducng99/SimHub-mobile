@@ -3,10 +3,10 @@ name: Expo build
 on:
   push:
     branches: [ main ]
-    tags: '*'
+    tags: ['*']
   pull_request:
     branches: [ main ]
-    tags: '*'
+    tags: ['*']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
