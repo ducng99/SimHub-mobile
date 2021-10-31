@@ -26,7 +26,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       # Setup expo
-      - name: Expo Build
+      - name: Setup expo
         uses: expo/expo-github-action@v6
         with:
           expo-version: 4.x
