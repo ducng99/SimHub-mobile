@@ -2,7 +2,7 @@
   "expo": {
     "name": "SimHub",
     "slug": "simhub-mobile",
-    "version": "1.0.4",
+    "version": "1.1.1",
     "orientation": "landscape",
     "icon": "./assets/logo512.png",
     "splash": {
@@ -19,7 +19,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "dev.ducng.simhub",
-      "buildNumber": "1.0.4",
+      "buildNumber": "1.1.1",
       "infoPlist": {
         "NSCameraUsageDescription": "The camera is used to scan the QR code in a screen. After finished fetching the code, the app will close the screen."
       }
@@ -34,7 +34,7 @@
         "VIBRATE"
       ],
       "package": "dev.ducng.simhub",
-      "versionCode": 430010004
+      "versionCode": 430010101
     },
     "web": {
       "favicon": "./assets/logo512.png"
