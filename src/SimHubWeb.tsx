@@ -1,4 +1,5 @@
-import { NavigationProp, Route, useFocusEffect } from "@react-navigation/native";
+import { Route, useFocusEffect } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
 import React, { useEffect, useState } from "react";
 import { Platform, StatusBar } from "react-native";
@@ -6,7 +7,7 @@ import WebView from "react-native-webview";
 
 interface IProps {
     route: Route<string, { url: string }>;
-    navigation: NavigationProp<ReactNavigation.RootParamList>;
+    navigation: NativeStackNavigationProp<any>;
 }
 
 export default function SimHubWeb({ navigation, route }: IProps) {

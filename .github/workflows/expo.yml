@@ -25,7 +25,6 @@ jobs:
         with:
           expo-version: 4.x
           token: ${{ secrets.EXPO_CLI_TOKEN }}
-          expo-cache: true
           
       - run: yarn install
       - run: expo build:android -t apk

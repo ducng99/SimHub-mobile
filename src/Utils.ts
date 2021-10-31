@@ -1,4 +1,4 @@
-export async function CanConnectTo(url: string, timeout: number): Promise<boolean> {
+export function CanConnectTo(url: string, timeout = 3000): Promise<boolean> {
     return new Promise((resolve) => {
         const timer = setTimeout(() => resolve(false), timeout);
 

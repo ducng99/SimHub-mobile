@@ -18,14 +18,22 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "buildNumber": "1.0.4"
+      "bundleIdentifier": "dev.ducng.simhub",
+      "buildNumber": "1.0.4",
+      "infoPlist": {
+        "NSCameraUsageDescription": "The camera is used to scan the QR code in a screen. After finished fetching the code, the app will close the screen."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo512.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "dev.ducng.simhub_mobile",
+      "permissions": [
+        "CAMERA",
+        "VIBRATE"
+      ],
+      "package": "dev.ducng.simhub",
       "versionCode": 430010004
     },
     "web": {
