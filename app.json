@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "SimHub",
+    "slug": "simhub-mobile",
+    "version": "1.0.1",
+    "orientation": "landscape",
+    "icon": "./assets/logo512.png",
+    "splash": {
+      "image": "./assets/logo512.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo512.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "dev.ducng.simhub_mobile",
+      "versionCode": 202111011
+    },
+    "web": {
+      "favicon": "./assets/logo512.png"
+    }
+  }
+}
