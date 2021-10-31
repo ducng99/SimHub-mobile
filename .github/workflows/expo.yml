@@ -31,7 +31,7 @@ jobs:
       - name: Expo Build
         uses: expo/expo-github-action@5.1.1
         with:
-          expo_token: ${{ secrets.EXPO_CLI_TOKEN }}
+          token: ${{ secrets.EXPO_CLI_TOKEN }}
           expo-cache: true
           
       - run: yarn install
