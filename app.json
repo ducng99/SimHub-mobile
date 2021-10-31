@@ -2,7 +2,7 @@
   "expo": {
     "name": "SimHub",
     "slug": "simhub-mobile",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "orientation": "landscape",
     "icon": "./assets/logo512.png",
     "splash": {
@@ -18,7 +18,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "buildNumber": "1.0.3"
+      "buildNumber": "1.0.4"
     },
     "android": {
       "adaptiveIcon": {
@@ -26,7 +26,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "dev.ducng.simhub_mobile",
-      "versionCode": 430010003
+      "versionCode": 430010004
     },
     "web": {
       "favicon": "./assets/logo512.png"

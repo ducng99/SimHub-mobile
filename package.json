@@ -1,12 +1,12 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "build": "standard-version --skip.changelog",
+    "bump": "standard-version --skip.changelog",
     "build:a": "expo build:android -t apk",
     "eject": "expo eject"
   },
