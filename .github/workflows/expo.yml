@@ -12,10 +12,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        node: [14, 16]
 
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +19,7 @@ jobs:
       # Setup node
       - uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 16.x
 
       # Setup expo
       - name: Setup expo
