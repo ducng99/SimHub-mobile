@@ -1,0 +1,38 @@
+name: Expo build
+
+on:
+  push:
+    branches: [ main ]
+    tags: ['*']
+  pull_request:
+    branches: [ main ]
+    tags: ['*']
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node: [14.x, 16.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      # Setup node
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      # Setup expo
+      - name: Expo Build
+        uses: expo/expo-github-action@5.1.1
+        with:
+          token: ${{ secrets.EXPO_CLI_TOKEN }}
+          expo-cache: true
+          
+      - run: yarn install
+      - run: expo build:android -t apk
