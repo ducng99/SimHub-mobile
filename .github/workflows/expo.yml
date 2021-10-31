@@ -29,6 +29,7 @@ jobs:
       - name: Expo Build
         uses: expo/expo-github-action@v6
         with:
+          expo-version: 4.x
           token: ${{ secrets.EXPO_CLI_TOKEN }}
           expo-cache: true
           
