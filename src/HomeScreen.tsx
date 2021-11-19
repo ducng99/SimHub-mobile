@@ -5,6 +5,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Route, useFocusEffect } from '@react-navigation/native'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { CanConnectTo } from './Utils';
+import { lockAsync, OrientationLock } from "expo-screen-orientation";
 
 const ipRegex = new RegExp(/^(\b25[0-5]|\b2[0-4][0-9]|\b[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/);
 const urlRegex = new RegExp(/(?:http:\/\/)?([0-9.]+):(\d+)/i);
@@ -23,6 +24,8 @@ export default function HomeScreen({ navigation, route }: IProps) {
     const [snackbarText, setSnackbarText] = useState('');
 
     useEffect(() => {
+        lockAsync(OrientationLock.LANDSCAPE);
+        
         (async () => {
             try {
                 const savedIP = await AsyncStorage.getItem('ip');

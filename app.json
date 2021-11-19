@@ -29,8 +29,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "permissions": [
-        "CAMERA",
-        "VIBRATE"
+        "CAMERA"
       ],
       "package": "dev.ducng.simhub",
       "versionCode": 430010103
