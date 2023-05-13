@@ -2,7 +2,8 @@ name: Expo build
 
 on:
   push:
-    tags: ['*']
+    tags:
+      - "v*.*.*"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -13,18 +14,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
-      # Setup node
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
 
-      # Setup expo
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.x
+
       - name: Setup expo
         uses: expo/expo-github-action@v6
         with:
-          expo-version: 4.x
+          eas-version: latest
           token: ${{ secrets.EXPO_CLI_TOKEN }}
-          
-      - run: yarn install
-      - run: expo build:android -t apk
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build in EAS
+        run: eas build
